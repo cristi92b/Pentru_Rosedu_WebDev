@@ -1,4 +1,0 @@
-all:
-	g++ main.cpp functie.cpp -o program.exe -O0
-clean:
-	rm *.o *.exe
