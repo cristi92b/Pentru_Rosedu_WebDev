@@ -52,32 +52,53 @@ void afiseaza_lista_de_intregi(list<int> x)
 	cout<<endl;
 }
 
+void afiseaza_lista_de_functii(list<functie> x)
+{
+	cout<<"root";
+	for(list<functie>::iterator it=x.begin();it != x.end();++it)
+	{
+		cout<<"->"<<it->getLabel();
+	}
+	cout<<endl;
+}
+
 int main()
 {
     int i;
     list<int> rezultat;
     list<functie> lista;
+    /*
     functie a;
 
-    a.set(add_one);
+    a.setAll(add_one,"add_one");
     lista.push_back(a);
 
-    a.set(multiply_by_five);
+    a.setAll(multiply_by_five,"multiply_by_five");
     lista.push_back(a);
 
-    a.set(substract_three);
+    a.setAll(substract_three,"substract_three");
     lista.push_back(a);
 
-    a.set(add_two);
+    a.setAll(add_two,"add_two");
     lista.push_back(a);
 
-    a.set(multiply_by_three);
+    a.setAll(multiply_by_three,"multiply_by_three");
     lista.push_back(a);
+    */
 
+    functie a(add_one,"add_one"),b(multiply_by_five,"multiply_by_five"),c(substract_three,"substract_three"),d(add_two,"add_two"),e(multiply_by_three,"multiply_by_three");
+
+    lista.push_back(a);
+    lista.push_back(b);
+    lista.push_back(c);
+    lista.push_back(d);
+    lista.push_back(e);
     cout<<"i="; cin>>i;
-    
     rezultat=executare(lista,i);
+    afiseaza_lista_de_functii(lista);
     afiseaza_lista_de_intregi(rezultat);
+    lista.clear();
+    rezultat.clear();
     return 0;
 }
 
