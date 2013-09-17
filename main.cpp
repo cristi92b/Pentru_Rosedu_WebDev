@@ -54,6 +54,7 @@ void afiseaza_lista_de_intregi(list<int> x)
 
 int main()
 {
+    int i;
     list<int> rezultat;
     list<functie> lista;
     functie a;
@@ -73,7 +74,9 @@ int main()
     a.set(multiply_by_three);
     lista.push_back(a);
 
-    rezultat=executare(lista,4);
+    cout<<"i="; cin>>i;
+    
+    rezultat=executare(lista,i);
     afiseaza_lista_de_intregi(rezultat);
     return 0;
 }
