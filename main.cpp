@@ -42,6 +42,16 @@ list<int> executare(list<functie> x,int i)
     return result;
 }
 
+void afiseaza_lista_de_intregi(list<int> x)
+{
+	cout<<"root";
+	for(list<int>::iterator it=x.begin();it != x.end();++it)
+	{
+		cout<<"->"<<*it;
+	}
+	cout<<endl;
+}
+
 int main()
 {
     list<int> rezultat;
@@ -64,7 +74,7 @@ int main()
     lista.push_back(a);
 
     rezultat=executare(lista,4);
-
+    afiseaza_lista_de_intregi(rezultat);
     return 0;
 }
 
