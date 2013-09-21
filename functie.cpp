@@ -31,7 +31,7 @@ functie::functie(const functie& obj)
 functie::~functie()
 {
     if(label!=NULL)
-       delete[] label;
+        delete[] label;
     label=NULL;
     fptr=NULL;
 }
@@ -50,7 +50,7 @@ char* functie::getLabel()
 void functie::setLabel(char* nume)
 {
     if(label!=NULL)
-       delete[] label;
+        delete[] label;
     label=NULL;
     label=new char[strlen(nume)+1];
     strcpy(label,nume);
@@ -66,7 +66,7 @@ void functie::setAll(int (*new_func)(int),char* nume)
 {
     fptr=new_func;
     if(label!=NULL)
-       delete[] label;
+        delete[] label;
     label=NULL;
     label=new char[strlen(nume)+1];
     strcpy(label,nume);
